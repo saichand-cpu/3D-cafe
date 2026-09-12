@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import './demo-overrides.css';
 import SmoothScroll from '@/components/SmoothScroll';
 
 export const metadata: Metadata = {
