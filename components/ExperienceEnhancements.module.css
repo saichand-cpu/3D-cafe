@@ -1,0 +1,53 @@
+.experienceRoot :global(.cinematic-section){will-change:transform,opacity;transform-origin:center center}
+.experienceRoot :global(.menu-section){perspective:1400px}
+.experienceRoot :global(.menu-grid){perspective:1400px}
+.experienceRoot :global(.menu-card){transform-style:preserve-3d;backface-visibility:hidden}
+.experienceRoot :global(.menu-card-orb){height:175px;display:grid;place-items:center;position:relative;transform:translateZ(35px);filter:drop-shadow(0 22px 28px rgba(0,0,0,.45))}
+.experienceRoot :global(.drink-cup){width:92px;height:72px;border-radius:8px 8px 28px 28px;position:relative;background:linear-gradient(145deg,#342a20,#0e0d0b 72%);border:1px solid #9b784c88;box-shadow:inset 0 5px 12px #ffffff12,0 12px 22px #0008;transform:perspective(180px) rotateX(7deg)}
+.experienceRoot :global(.drink-cup:before){content:'';position:absolute;left:8px;right:8px;top:-9px;height:20px;border-radius:50%;background:#22140d;border:2px solid #b78d56;box-shadow:inset 0 0 0 4px #3c2112}
+.experienceRoot :global(.drink-handle){position:absolute;right:-25px;top:13px;width:31px;height:37px;border:7px solid #b78d56;border-left:0;border-radius:0 22px 22px 0}
+.experienceRoot :global(.drink-liquid){position:absolute;z-index:2;left:14px;right:14px;top:-4px;height:9px;border-radius:50%;background:#9b5a2e;box-shadow:0 0 20px #b56c3270}
+.experienceRoot :global(.drink-shadow){position:absolute;bottom:2px;width:150px;height:22px;border-radius:50%;background:#0008;filter:blur(10px)}
+.experienceRoot :global(.drink-2 .drink-cup){background:linear-gradient(145deg,#d8d0c4,#554d44 75%)}
+.experienceRoot :global(.drink-2 .drink-liquid){background:#c8b89d}
+.experienceRoot :global(.drink-3 .drink-cup){background:linear-gradient(145deg,#211b17,#090807)}
+.experienceRoot :global(.drink-3 .drink-liquid){background:#3b2114}
+.experienceRoot :global(.drink-4 .drink-cup){background:linear-gradient(145deg,#b99053,#312318)}
+.experienceRoot :global(.drink-4 .drink-liquid){background:#d6b77c}
+.experienceRoot :global(.menu-card.is-active){border-color:#b18b58;box-shadow:0 28px 70px #0006,inset 0 0 35px #b18b5812}
+.experienceRoot :global(.scene-label){font:8px 'DM Mono',monospace;letter-spacing:.22em;color:#d9b678;padding:7px 10px;border:1px solid #b18b5840;background:#090806aa;backdrop-filter:blur(8px);border-radius:999px}
+.experienceRoot :global(.scene-label-right){color:#aeb8ce;border-color:#7888a844}
+.experienceRoot :global(.scene-stage-labels){position:absolute;left:4%;right:4%;bottom:12%;z-index:4;display:flex;justify-content:space-between;pointer-events:none;font:8px 'DM Mono',monospace;letter-spacing:.18em;color:#7d756b}
+.experienceRoot :global(.hero-art){transition:filter .8s ease}
+.experienceRoot :global(.hero-art:after){content:'MORNING → GOLDEN HOUR → AFTER DARK';position:absolute;right:4%;top:18%;font:8px 'DM Mono',monospace;letter-spacing:.18em;color:#7b7267;writing-mode:vertical-rl;opacity:.7}
+@media (max-width:900px){
+ .experienceRoot :global(.hero){min-height:780px}
+ .experienceRoot :global(.hero-copy){top:13%;z-index:5}
+ .experienceRoot :global(.hero-art){inset:36% -8% 0 -8%;opacity:.92}
+ .experienceRoot :global(.hero-art:after){display:none}
+ .experienceRoot :global(.scene-stage-labels){bottom:8%;font-size:7px;letter-spacing:.12em}
+ .experienceRoot :global(.hero h1){font-size:18vw;line-height:.82}
+ .experienceRoot :global(.hero-sub){max-width:290px;margin:25px 0}
+ .experienceRoot :global(.hero-actions){gap:12px;flex-wrap:wrap}
+ .experienceRoot :global(.menu-grid){grid-template-columns:1fr 1fr;gap:10px}
+ .experienceRoot :global(.menu-card){min-height:340px;padding:18px;border-radius:18px}
+ .experienceRoot :global(.menu-card-orb){height:145px;transform:translateZ(20px) scale(.86)}
+ .experienceRoot :global(.menu-card h3){font-size:18px}
+ .experienceRoot :global(.menu-card p){font-size:11px}
+ .experienceRoot :global(.section-head){display:block}
+ .experienceRoot :global(.section-note){margin-top:24px}
+ .experienceRoot :global(.custom-cursor){display:none}
+}
+@media (max-width:520px){
+ .experienceRoot :global(.hero){min-height:740px}
+ .experienceRoot :global(.hero-art){inset:39% -22% -2% -22%}
+ .experienceRoot :global(.hero-meta){bottom:18px;font-size:7px}
+ .experienceRoot :global(.menu-grid){grid-template-columns:1fr}
+ .experienceRoot :global(.menu-card){min-height:360px}
+ .experienceRoot :global(.menu-card-orb){height:155px}
+ .experienceRoot :global(.scene-stage-labels){display:none}
+}
+@media (prefers-reduced-motion:reduce){
+ .experienceRoot :global(.cinematic-section){transform:none!important;filter:none!important}
+ .experienceRoot :global(.menu-card){transform:none!important}
+}
